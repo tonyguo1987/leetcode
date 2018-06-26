@@ -1,3 +1,7 @@
+// Problem: Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+// hint: 1. What pattern does an IP address have?  four numbers in form x.x.x.x
+//       2. Each number is within 0-255
+
 class Solution {
     // Compare two numerical strings
     bool cmpStr(string a, string b){
@@ -23,6 +27,7 @@ public:
         const int NUM_DIGITS = 3;
         string s_max = "255";
         vector<string> res;
+        // Four loops to extract four numbers from the input string.
         for (int i = 1; i <= NUM_DIGITS; i++ ){
             string si = s.substr(0, i);
             if (!checkDigit(s_max, si))
